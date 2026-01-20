@@ -95,7 +95,7 @@ All application output screenshots are available here:
 * Improved UI using frameworks like Bootstrap
 
 
-## 📚 Learning Outcomes
+##  Learning Outcomes
 
 * Hands-on experience with JSP and JDBC
 * Database integration using Apache Derby
