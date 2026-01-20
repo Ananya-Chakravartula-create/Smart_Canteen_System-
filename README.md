@@ -82,8 +82,9 @@ Stores food order details:
 
 
 
-##  Screens Included in File: Output_Screens.pdf
-
+##  Project Output Screens
+All application output screenshots are available here:  
+ [View Output Screens (PDF)](Output_Screens.pdf)
 
 ##  Future Enhancements
 
