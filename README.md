@@ -82,7 +82,7 @@ Stores food order details:
 
 
 
-##  Screens Included in File: Output_Images.dox
+##  Screens Included in File: Output_Screens.pdf
 
 
 ##  Future Enhancements
