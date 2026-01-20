@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Canteen System - Menu</title>
+    <style>
+         body {
+            background: url('Food.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .menu-section {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            text-align: center; /* Center aligning the menu sections */
+        }
+        .menu-section h2 {
+            color: rgb(202, 145, 79);
+            margin-top: 0;
+        }
+        .menu-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            display: column; /* Ensures items are displayed in a line */
+            text-align: center; /* Left align the content within each item */
+        }
+        .menu-item:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .menu-item h3 {
+            margin-top: 0;
+            color: white;
+        }
+        .menu-item p {
+            color: white;
+            margin: 5px 0;
+        }
+        .price-button {
+            background-color: rgb(202, 145, 79);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .order-section {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            text-align: center;
+        }
+        .order-section h2 {
+            color: rgb(202, 145, 79);
+        }
+        .order-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .order-section ul li {
+            color: white;
+            margin: 5px 0;
+        }
+        .logout {
+            margin: 20px;
+            padding: 5px 20px;
+            background-color: rgb(202, 145, 79);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menu</h1>
+
+    <div class="menu-section">
+        
+        <h2>Vegetarian</h2>
+        
+        <div class="menu-item">
+            <h3>Burgers</h3>
+            <p>Veg Burger - Price: 120 <button class="price-button" onclick="addToOrder('Veg Burger', 120)">Add</button></p>
+            <p>Panner Burger - Price: 130 <button class="price-button" onclick="addToOrder('Panner Burger', 130)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Pizzas</h3>
+            <p>Veg Pizza - Price: 150 <button class="price-button" onclick="addToOrder('Veg Pizza', 150)">Add</button></p>
+            <p>Panner Tikka Pizza - Price: 160 <button class="price-button" onclick="addToOrder('Panner Tikka Pizza', 160)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Others</h3>
+            <p>French Fries - Price: 80 <button class="price-button" onclick="addToOrder('French Fries', 80)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Starters</h3>
+            <p>Panner 65 - Price: 200 <button class="price-button" onclick="addToOrder('Panner 65', 200)">Add</button></p>
+            <p>Veg Manchurian - Price: 180 <button class="price-button" onclick="addToOrder('Veg Manchurian', 180)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Curries</h3>
+            <p>Panner Butter Masala - Price: 250 <button class="price-button" onclick="addToOrder('Panner Butter Masala', 250)">Add</button></p>
+            <p>Dal Tadka - Price: 220 <button class="price-button" onclick="addToOrder('Dal Tadka', 220)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Bread</h3>
+            <p>Roti - Price: 15 <button class="price-button" onclick="addToOrder('Roti', 15)">Add</button></p>
+            <p>Naan - Price: 20 <button class="price-button" onclick="addToOrder('Naan', 20)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Rice</h3>
+            <p>Veg Biryani - Price: 280 <button class="price-button" onclick="addToOrder('Veg Biryani', 280)">Add</button></p>
+            <p>Jeera Rice - Price: 150 <button class="price-button" onclick="addToOrder('Jeera Rice', 150)">Add</button></p>
+            <p>Veg Fried Rice - Price: 200 <button class="price-button" onclick="addToOrder('Veg Fried Rice', 200)">Add</button></p>
+            <p>Veg Manchurian Fried Rice - Price: 220 <button class="price-button" onclick="addToOrder('Veg Manchurian Fried Rice', 220)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Noodles</h3>
+            <p>Veg Noodles - Price: 180 <button class="price-button" onclick="addToOrder('Veg Noodles', 180)">Add</button></p>
+            <p>Veg Manchurian Noodles - Price: 200 <button class="price-button" onclick="addToOrder('Veg Manchurian Noodles', 200)">Add</button></p>
+        </div>
+        
+    </div>
+    
+    <div class="menu-section">
+        <h2>Non-Vegetarian</h2>
+        
+        <div class="menu-item">
+            <h3>Burgers</h3>
+            <p>Chicken Burger - Price: 140 <button class="price-button" onclick="addToOrder('Chicken Burger', 140)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Starters</h3>
+            <p>Chicken 65 - Price: 220 <button class="price-button" onclick="addToOrder('Chicken 65', 220)">Add</button></p>
+            <p>Chicken Manchurian - Price: 240 <button class="price-button" onclick="addToOrder('Chicken Manchurian', 240)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Curries</h3>
+            <p>Chicken Tikka Masala - Price: 300 <button class="price-button" onclick="addToOrder('Chicken Tikka Masala', 300)">Add</button></p>
+            <p>Butter Chicken - Price: 320 <button class="price-button" onclick="addToOrder('Butter Chicken', 320)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Rice</h3>
+            <p>Egg Fried Rice - Price: 220 <button class="price-button" onclick="addToOrder('Egg Fried Rice', 220)">Add</button></p>
+            <p>Chicken Fried Rice - Price: 240 <button class="price-button" onclick="addToOrder('Chicken Fried Rice', 240)">Add</button></p>
+            <p>Chicken Biryani - Price: 350 <button class="price-button" onclick="addToOrder('Chicken Biryani', 350)">Add</button></p>
+        </div>
+        
+        <div class="menu-item">
+            <h3>Noodles</h3>
+            <p>Egg Noodles - Price: 200 <button class="price-button" onclick="addToOrder('Egg Noodles', 200)">Add</button></p>
+            <p>Chicken Noodles - Price: 220 <button class="price-button" onclick="addToOrder('Chicken Noodles', 220)">Add</button></p>
+    </div>
+
+    <h2>Order Summary</h2>
+    <ul id="orderList"></ul>
+    <p>Total: <span id="totalPrice">0</span></p>
+    <form action="placeOrder.jsp" method="post">
+        <input type="hidden" name="orderDetails" id="orderDetails">
+        <input type="hidden" name="total" id="total">
+        <button type="submit">Confirm Order</button>
+    </form>
+
+    <script>
+        let orderList = [];
+        let total = 0;
+
+        function addToOrder(item, price) {
+            orderList.push({ item, price });
+            total += price;
+
+            const list = document.getElementById("orderList");
+            const li = document.createElement("li");
+            li.textContent = `${item} - ${price}`;
+            list.appendChild(li);
+
+            document.getElementById("totalPrice").textContent = total;
+            document.getElementById("orderDetails").value = JSON.stringify(orderList);
+            document.getElementById("total").value = total;
+        }
+    </script>
+</body>
+</html>
